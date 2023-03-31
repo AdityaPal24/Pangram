@@ -1,0 +1,26 @@
+public class pangram {
+    public static void main(String[]args){
+        boolean flag=false;
+        String str1="a b c d e f g h i j k l m n o p q r s t u v w x y z";
+        str1=str1.replace(" ","");
+        char arr[]=str1.toCharArray();
+        int ab[]=new int[26];
+        for(int i=0;i<=arr.length-1;i++)
+        {
+            ab[arr[i]-97]++;
+        }
+        for(int i=0;i<=ab.length-1;i++)
+        {
+            if(ab[i]==0)
+            {
+                System.out.println("it is not a pangram");
+                flag=true;
+            }
+           
+            }
+        if(flag==false)
+        {
+            System.out.println("it is a pangram");
+        }
+        }
+        }
